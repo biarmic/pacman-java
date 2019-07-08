@@ -61,7 +61,6 @@ public class Pacman extends JLabel{
 		setIcon(direction==Direction.Up ? up : direction==Direction.Down ? down : direction==Direction.Left ? left : right);
 	}
 	public void go() {
-		System.out.println("moving");
 		if(maze.whatIsThere(row,column)==Tile.Teleport && column==0 && intended!=Direction.Right && direction==Direction.Left)
 			setPosition(row,27);
 		else if(maze.whatIsThere(row,column)==Tile.Teleport && column==27 && intended!=Direction.Left && direction==Direction.Right)
